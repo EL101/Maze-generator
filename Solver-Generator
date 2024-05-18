@@ -52,7 +52,7 @@ def displayMaze(maze):
     savestring=""
     for j in i:
       if j==0:
-        savestring+='_ '
+        savestring+='. '
       elif j==1:
         savestring+='O '
       elif j==2:
@@ -60,7 +60,7 @@ def displayMaze(maze):
       elif j==3:
         savestring+='E '
       elif j==4:
-        savestring+='H '
+        savestring+='O '
     print(savestring)
 
 def dfs(maze, i, j):
@@ -119,4 +119,4 @@ for i in range(len(maze)):
       x=i
       y=j
       break
-print(bfs(maze, 0, [[x,y]]))
+print("Steps required to go from S to E: ", bfs(maze, 0, [[x,y]]))
